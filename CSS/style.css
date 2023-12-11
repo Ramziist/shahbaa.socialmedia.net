@@ -1,0 +1,302 @@
+/* 
+#15038C 1st color
+#0D0259 2nd color
+#8278BF 3rd color
+#F27405 orange 'highlight'
+#F2F2F2 white
+#363540 dark
+#AAA3D9 grey 'for muted coloring'
+#DFDCF2 grey 2 'may it's background!!'
+ */
+
+html body {
+    font-family: fantasy !important;
+    background-color: #F2F2F2;
+    color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #DFDCF2;
+    position: relative;
+}
+
+.jumbotron {
+    padding-bottom: 10px;
+    padding-top: 25px;
+    background-color: #0D0259;
+    color: #F2F2F2;
+}
+
+.mainphoto {
+    left: 15%;
+    margin: 20px;
+    background: transparent;
+}
+
+.mainbla {
+    left: 20%;
+}
+
+.login {
+    background-color: #15038C;
+    width: 80%;
+    height: auto;
+    border: 2px solid #8278BF;
+    border-radius: 30px;
+}
+
+.form-control {
+    height: 40px;
+    box-shadow: none;
+    color: #969fa4;
+}
+
+.form-control:focus {
+    border-color: #5cb85c;
+}
+
+.form-control,
+.btn {
+    border-radius: 3px;
+}
+
+.signup-form {
+    width: 450px;
+    margin: 0 auto;
+    padding: 30px 0;
+    font-size: 15px;
+}
+
+.signup-form h2 {
+    color: #636363;
+    margin: 0 0 15px;
+    position: relative;
+    text-align: center;
+}
+
+.signup-form h2:before,
+.signup-form h2:after {
+    content: "";
+    height: 2px;
+    width: 25%;
+    background: #d4d4d4;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}
+
+.signup-form h2:before {
+    left: 0;
+}
+
+.signup-form h2:after {
+    right: 0;
+}
+
+.signup-form .hint-text {
+    color: #999;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.signup-form form {
+    color: #999;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background: #F2F2F2;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+.signup-form .form-group {
+    margin-bottom: 20px;
+}
+
+.signup-form input[type="checkbox"] {
+    margin-top: 3px;
+}
+
+.signup-form .btn {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 140px;
+    outline: none !important;
+}
+
+.signup-form .row div:first-child {
+    padding-right: 10px;
+}
+
+.signup-form .row div:last-child {
+    padding-left: 10px;
+}
+
+.signup-form a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.signup-form a:hover {
+    text-decoration: none;
+}
+
+.signup-form form a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.signup-form form a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    background-color: #0D0259 !important;
+}
+
+.navbar-light .navbar-brand {
+    color: #F2F2F2;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #F27405;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #AAA3D9;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #F27405;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background: #8278BF;
+}
+
+.navbar-expand-sm .navbar-nav .dropdown-menu {
+    background: #8278BF;
+    margin-top: 18%;
+}
+
+.cover {
+    height: 50vh;
+    width: 100vw;
+    border-radius: 0px 0px 7px 7px;
+}
+
+.profilePic img {
+    -webkit-clip-path: circle(100px at 100% 100%);
+    clip-path: circle(100px at 50% 50%);
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+    min-width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20vh;
+}
+
+.profileHeader .profilePic .changeimg {
+    display: contents;
+    margin-left: auto;
+    margin-right: auto;
+    height: 36px;
+    width: 36px;
+    background-color: #8278BF;
+    border-radius: 50%;
+}
+
+.infoNav {
+    padding: 10px;
+    align-content: center;
+    text-align: center;
+}
+
+.infoNav h3 {
+    font-size: 200%;
+}
+
+.chatBtn {
+    width: 100%;
+    border-width: 1px;
+    border-color: #8278BF;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #15038C;
+    color: #F2F2F2;
+}
+
+.chatBtn:hover {
+    background-color: #0D0259;
+}
+
+.chatBtn:focus {
+    outline: 0px;
+    background-color: #8278BF;
+}
+
+.confirmUpload {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(153, 153, 153, 0.3);
+    border: none;
+    border-radius: 50%;
+}
+
+.confirmUpload i {
+    height: 20px;
+    width: 20px;
+}
+
+.btn input {
+    display: none;
+}
+
+textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 2px;
+}
+
+.postsArea {
+    margin-top: 20px;
+    border-top: #15038C solid;
+}
+
+.PostPublisher {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    display: block;
+    position: static;
+}
+
+#download {
+    width: 100%;
+    margin: 5px;
+}
+
+.post {
+    border-bottom: #0D0259 solid;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+a.username {
+    text-decoration: none;
+    cursor: pointer;
+    color: #363540;
+    padding-left: 10px;
+    margin-left: 10px;
+}

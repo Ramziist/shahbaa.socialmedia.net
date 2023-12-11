@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand" href="home.php">Al-shahbaa</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="profile.php?<?php echo " u_id=$userId "; ?>">
+                    <?php echo "$userFname $userLname"; ?>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="home.php"><i class="fas fa-home fa-lg  "></i> Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="doctorSearch.php">
+                    <i class="fas fa-chalkboard-teacher fa-lg  "></i> Doctors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="searchUser.php"><i class="fas fa-user-tie fa-lg  "></i> Students</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" name="searchUser">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="SearchUserBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="users.php" id="usersDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-cog fa-lg  "></i></a>
+            <div class="dropdown-menu" aria-labelledby="usersDropdown">
+                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="includes/logout.php">logout</a>
+            </div>
+        </li>
+    </div>
+</nav>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                blabla
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">haha</div>
+
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+                <i><div class="row">
+                        <haha class="blal">
+                            <div class="card text-left">
+                              <img class="card-img-top" src="holder.js/100px180/" alt="">
+
+                              <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Body</p>
+                              </div>
+                            </div>
+                        </haha>
+                    </div></i>
+                <div class="row">
+                    <div class="col-md-1-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">title</h3>
+                                <p class="card-text">Text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Title</h3>
+                                <p class="card-text">Text</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <strong><i class="fal fa-hand-heart fa-lg fa-fw"></i>wtf</strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipisici</p>
+                <p class="lorem"><i class="fas fa-water-lower fa-lg  "></i></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus aperiam obcaecati quisquam</p>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="col-sm-12">
+                            <img src="img\bla.jpg" alt="nothing" srcset="">
+                            <br>
+                            <img src="./cover/Bussiness.jpg" alt="bus0">4
+
+                        </div>
+                        <div class="driver">
+                            duck this shit & duck everybody duck you, duck me, duck, duck, duck I'm Ramez Istanbouli, 25 years old don't know what I'm doing here and don't know what to say I'm so mshawash
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <img src="<?php echo " $userCover "; ?>" class="img-fluid cover" alt="Cover Picture">
+
+        <div class="profileHeader">
+            <div class="profilePic">
+                <img src="<?php echo " $userImage "; ?>" alt="avatar">
+
+                <form action="profile.php?u_id=<?php echo $userId; ?>" method="post" enctype="multipart/form-data">
+                    <label class='btn confirmUpload'>
+                    <input type='file' name='usernewImage' size='50' accept="image/*">
+                    <i class='fas fa-camera fa-lg'></i>
+                </label>
+                    <button name="update" class="btn btn-info">Update Profile</button>
+
+
+                </form>
+            </div>
+
+            <div class="infoNav">
+                <h3 class="username">
+                    <?php 
+                    if (!$isDoctor){
+                    echo "$userFname $userMiddleName $userLname";}
+                    else {
+                        echo "$userFname $userLname";
+                    } ?>
+                </h3>
+            </div>
+        </div>
+        <div class="mainBody">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <ul class="list-group list-group-flush">
+                            <?php if (!$isDoctor){ echo'
+                            <li class="list-group-item">
+                                <p class="email">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    '.$userEmail.'
+                                </p>
+                            </li>';}
+                            ?>
+
+                            <li class="list-group-item">
+                                <p class="Specialization">
+                                    <i class="fa fa-university" aria-hidden="true"></i>
+                                    <?php echo " $userSpecialization"; ?>
+                                </p>
+                            </li>
+                            <?php if (!$isDoctor){ echo'
+                            <li class="list-group-item">
+                                <p class="StudyYear">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    '.$userStudyYear.' Year
+                                </p>
+                            </li>';}
+                            ?>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <ul class="list-group list-group-flush">
+                            <?php if (!$isDoctor){ echo'
+                            <li class="list-group-item">
+                                <p class="DateOfBirth">
+                                    <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                    '.$userDateOfBirth.'
+                                </p>
+                            </li>';}
+                            ?>
+                            <li class="list-group-item">
+                                <p class="Gender">
+                                    <i class="fa fa-<?php echo " $userGender "; ?>" aria-hidden="true"></i>
+                                    <?php echo " $userGender"; ?>
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="profileBtn">
+                                    <button class="chatBtn">
+                                        <i class="fa fa-comment" aria-hidden="true"></i> Chat
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-8">
+                    <div class="bio">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laboriosam nesciunt sint repudiandae obcaecati magni, porro maxime molestias soluta dolore corrupti facilis voluptates rem asperiores architecto ipsa quibusdam quo distinctio.
+                    </div>
+                </div>
+                <div class="col-md-2">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
