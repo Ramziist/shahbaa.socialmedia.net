@@ -1,6 +1,6 @@
 # shahbaa.socialmedia.net
 
-You Can see database in the database folder Import it through PHPMyAdmin in database named 'SocialNetwork'
+You Can see database in the database folder Import it through PHPMyAdmin in database named 'Socialnetwork'
 
 default student:
 user: test
