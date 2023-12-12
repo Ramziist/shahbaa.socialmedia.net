@@ -46,7 +46,7 @@ include $head;
                 type="radio"
                 name="userType"
                 id="StudentRadio"
-                value="users"
+                value="user"
                 checked
               />
               <label class="form-check-label" for="StudentRadio">
@@ -60,7 +60,7 @@ include $head;
                 type="radio"
                 name="userType"
                 id="DoctorRadio"
-                value="doctors"
+                value="doctor"
               />
               <label class="form-check-label" for="DoctorRadio">
                   <i class="fas fa-chalkboard-teacher fa-sm  "></i>

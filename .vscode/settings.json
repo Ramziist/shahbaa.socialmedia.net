@@ -1,0 +1,51 @@
+{
+    "cSpell.words": [
+        "PDFs",
+        "changeimg",
+        "headerlogo",
+        "mainbla",
+        "mainphoto",
+        "signup"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "username": "root",
+            "name": "socialnetwork",
+            "database": "socialnetwork",
+            "password": ""
+        }
+    ],
+    "cSpell.ignoreWords": [
+        "adipisicing",
+        "amet",
+        "consectetur",
+        "cum",
+        "doloribus",
+        "eaque",
+        "elit",
+        "excepturi",
+        "expedita",
+        "explicabo",
+        "facilis",
+        "illo",
+        "omnis",
+        "optio",
+        "placeat",
+        "qui",
+        "quibusdam",
+        "repellat",
+        "reprehenderit",
+        "sequi",
+        "sint",
+        "ullam",
+        "veniam",
+        "voluptates"
+    ]
+}

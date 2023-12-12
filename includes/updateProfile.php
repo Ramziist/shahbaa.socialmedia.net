@@ -16,7 +16,7 @@
                     $imageNameChange = md5(rand()) . '.' . $ext;
                     $path = "users/" . $imageNameChange;
                     move_uploaded_file($imagetmpName, $path);
-                    $update = "UPDATE users SET Image = '$path' WHERE users.ID = $userId";
+                    $update = "UPDATE user SET Image = '$path' WHERE users.ID = $userId";
                     $run = mysqli_query($con, $update);
                     if ($run) {
                         echo '<script>alert("Your Profile Picture Updated Successfully");</script>';

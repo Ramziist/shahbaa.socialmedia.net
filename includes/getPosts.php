@@ -14,7 +14,7 @@ function getPost(){
     
     $startFrom = ($page-1) * $perPage;
 
-    $getPosts = "SELECT * FROM posts ORDER BY 1 DESC LIMIT $startFrom, $perPage";
+    $getPosts = "SELECT * FROM post ORDER BY 1 DESC LIMIT $startFrom, $perPage";
 
     $run = mysqli_query($con, $getPosts);
         
@@ -26,7 +26,7 @@ function getPost(){
         $postDate = $rowPosts['date'];
         $postCourse = $rowPosts['course'];
 
-        $userPublisher = "SELECT * FROM doctors WHERE ID='$Publisher'";
+        $userPublisher = "SELECT * FROM doctor WHERE ID='$Publisher'";
         $runKnowUser = mysqli_query($con, $userPublisher);
         $rowUser = mysqli_fetch_array($runKnowUser);
 

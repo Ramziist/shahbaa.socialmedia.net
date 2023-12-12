@@ -8,7 +8,7 @@
     include 'connection.php';
 
     $user = $_SESSION['username'];
-    $getUser = "select * from users where username='$user'";
+    $getUser = "select * from user where username='$user'";
     $runUser = mysqli_query($con,$getUser);
     $row = mysqli_fetch_array($runUser);
 
@@ -33,7 +33,7 @@
     $isDoctor = 0;
 
     }else {
-        $getUser = "select * from doctors where username='$user'";
+        $getUser = "select * from doctor where username='$user'";
         $runUser = mysqli_query($con,$getUser);
         $row = mysqli_fetch_array($runUser);
 

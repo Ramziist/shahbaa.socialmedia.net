@@ -8,7 +8,7 @@ if(isset($_REQUEST['u_id'])){
     global $con;
 
     $u_id = $_REQUEST['u_id'];
-    $select = "SELECT * FROM users WHERE ID='$u_id'";
+    $select = "SELECT * FROM user WHERE ID='$u_id'";
     $run = mysqli_query($con, $select);
     $rowProfile = mysqli_fetch_array($run);
 

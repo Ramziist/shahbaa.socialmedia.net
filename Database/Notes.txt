@@ -1,0 +1,1 @@
+make a Database with the name 'socialnetwork'

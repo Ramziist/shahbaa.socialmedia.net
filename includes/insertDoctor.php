@@ -20,7 +20,7 @@ if (isset($_POST['signup'])) {
 
     $coverPic = 'cover/Professor.jpg';
 
-    $insert = "INSERT INTO doctors (
+    $insert = "INSERT INTO doctor (
         firstName,
         lastName,
         username,

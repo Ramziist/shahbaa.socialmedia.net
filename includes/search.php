@@ -6,10 +6,10 @@
 
         if(isset($_GET['SearchUserBtn'])){
             $searchQuery = $_GET['searchUser'];
-            $getUser = "SELECT * FROM users WHERE firstName LIKE '%$searchQuery%' OR lastName LIKE '%$searchQuery%' OR username LIKE '%$searchQuery%'";
+            $getUser = "SELECT * FROM user WHERE firstName LIKE '%$searchQuery%' OR lastName LIKE '%$searchQuery%' OR username LIKE '%$searchQuery%'";
         }
         else{
-            $getUser = "SELECT * FROM users";
+            $getUser = "SELECT * FROM user";
         }
         
         $run = mysqli_query($con, $getUser);
@@ -53,10 +53,10 @@
 
         if(isset($_GET['SearchDoctorBtn'])){
             $searchQuery = $_GET['searchDoctor'];
-            $getUser = "SELECT * FROM doctors WHERE firstName LIKE '%$searchQuery%' OR lastName LIKE '%$searchQuery%' OR username LIKE '%$searchQuery%'";
+            $getUser = "SELECT * FROM doctor WHERE firstName LIKE '%$searchQuery%' OR lastName LIKE '%$searchQuery%' OR username LIKE '%$searchQuery%'";
         }
         else{
-            $getUser = "SELECT * FROM doctors";
+            $getUser = "SELECT * FROM doctor";
         }
         
         $run = mysqli_query($con, $getUser);

@@ -23,7 +23,7 @@ include 'connection.php';
             if($test)
             {
 
-               $insertPost = "INSERT INTO posts (publisher, content, PDF, date, course)
+               $insertPost = "INSERT INTO post (publisher, content, PDF, date, course)
                 VALUES (
                     $userId,
                     '$content',
@@ -52,7 +52,7 @@ include 'connection.php';
 
         elseif ($file_type == "") {
             
-            $insertPost = "INSERT INTO posts (publisher, content, date)
+            $insertPost = "INSERT INTO post (publisher, content, date)
             VALUES (
                 $userId,
                 '$content',

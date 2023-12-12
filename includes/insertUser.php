@@ -29,7 +29,7 @@ if (isset($_POST['signup'])) {
         //get the year of signup
         $year = date("y");
         $firstStep = $sp.$year;
-        $checkId = "SELECT ID FROM users WHERE ID LIKE '$firstStep%' ;";
+        $checkId = "SELECT ID FROM user WHERE ID LIKE '$firstStep%' ;";
 
         $runId = mysqli_query($con, $checkId);
         $countId = mysqli_num_rows($runId)+1;
@@ -40,7 +40,7 @@ if (isset($_POST['signup'])) {
         
         
 
-    $checkEmail = "SELECT email FROM users WHERE email = $email";
+    $checkEmail = "SELECT email FROM user WHERE email = '$email'";
     $runEmail = mysqli_query($con, $checkEmail);
 
     $checkRunEmail = mysqli_num_rows($runEmail);
@@ -82,7 +82,7 @@ if (isset($_POST['signup'])) {
         'bla'
     */
 
-    $insert = "INSERT INTO users (
+    $insert = "INSERT INTO user (
         ID,
         firstName,
         lastName,
