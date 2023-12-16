@@ -35,117 +35,84 @@ function getPost(){
 
         if ($content == '' && strlen($PDF) >= 1) {
             echo '
-            <div class="row">
-            <div class="col">
-            </div>
-            <div id="posts" class="col-6 post">
-                <div class="row">
-                    <div class="col-auto">
-                        <p>        
-                            <img src="' . $userImgPublisher . '" alt="profile" class="PostPublisher">    
-                        </p>
-                    </div>
-                    <div class="col">
-                        <div class="col">
-                            <h3><a href="doctorProfile.php?u_id=' . $Publisher . '">' . $userNamePublisher . '</a></h3>
-                            <h4><small>updated on: <strong>' . $postDate . '</strong></small></h4>
-                        </div>
-                        <!-- 
-                        <div class="col">
-                            <p>' . $content . '</p>
-                        </div> 
-                        -->
-                        
-                        <div class="col">
-                        <p>'.$postCourse.'</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col">
-                    <a name="download" id="download" class="btn btn-primary" href="' . $PDF . '" role="button"><i class="fa fa-download" aria-hidden="true"></i> download</a>
-                </div>
-            </div>    
-            <div class="col">
-            </div>
-            </div>
-            ';
-        }elseif ($content != '' && strlen($PDF) >= 1) {
-            echo '
-            <div class="row">
-            <div class="col">
-            </div>
-            <div id="posts" class="col-6 post">
-                <div class="row">
-                    <div class="col-auto">
-                        <p>        
-                            <img src="' . $userImgPublisher . '" alt="profile" class="PostPublisher">    
-                        </p>
-                    </div>
-                    <div class="col">
-                        <div class="col">
-                            <h3><a href="doctorProfile.php?u_id=' . $Publisher . '">' . $userNamePublisher . '</a></h3>
-                            <h4><small>updated on: <strong>' . $postDate . '</strong></small></h4>
-                        </div>
-                        
-                        <div class="col">
-                            <p>' . $content . '</p>
-                        </div> 
-                        
-                        <div class="col">
-                        <p>'.$postCourse.'</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col">
-                    <a name="download" id="download" class="btn btn-primary" href="' . $PDF . '" role="button"><i class="fa fa-download" aria-hidden="true"></i> download</a>
-                </div>
-            </div>    
-            <div class="col">
-            </div>
-            </div>
-            ';
-        }else {
-            echo '
-            <div class="row">
-            <div class="col">
-            </div>
-            <div id="posts" class="col-6 post">
-                <div class="row">
-                    <div class="col-auto">
-                        <p>        
-                            <img src="' . $userImgPublisher .'" alt="profile" class="PostPublisher">    
-                        </p>
-                    </div>
-                    <div class="col">
-                        <div class="col">
-                            <h3><a href="doctorProfile.php?u_id='.$Publisher.'">'.$userNamePublisher.'</a></h3>
-                            <h4><small>updated on: <strong>'.$postDate.'</strong></small></h4>
-                        </div>
-                         
-                        <div class="col">
-                            <p>'.$content.'</p>
-                        </div>
-                        <div class="col">
-                        <p>'.$postCourse.'</p>
-                        </div>
-                        
-                    </div>
-                </div>
+            <div id="posts" class="col-md-5 col-sm-12 post">
+             
+                <h3 class="doctor-name"><a href="doctorProfile.php?u_id=' . $Publisher . '">' . $userNamePublisher . '</a></h3>
                 
-                <!-- 
-                <div class="col">
-                    <a name="download" id="download" class="btn btn-primary" href="'.$PDF.'" role="button"><i class="fa fa-download" aria-hidden="true"></i> download</a>
-                </div> 
-                -->
+                    <div class="row">
+                            <div class="col-auto">
+                                <p>        
+                                    <img src="' . $userImgPublisher . '" alt="profile" class="PostPublisher">    
+                                </p>
+                            </div>
 
-            </div>    
-            <div class="col">
+                            <div class="col post-details">
+                                    <h4><small>updated on: <strong>' . $postDate . '</strong></small></h4>
+                                <!-- <p>' . $content . '</p> -->
+                                <p>'.$postCourse.'</p>
+                            </div>
+                    </div>
+
+                    <div class="col">
+                        <a name="download" id="download" class="btn" href="' . $PDF . '" role="button"><i class="fa fa-download" aria-hidden="true"></i> download</a>
+                    </div>
             </div>
-            </div>
-            ';
-        }
+       ';
+   }elseif ($content != '' && strlen($PDF) >= 1) {
+       echo '
+       <div id="posts" class="col-md-5 col-sm-12 post">
+         <h3 class="doctor-name"><a href="doctorProfile.php?u_id=' . $Publisher . '">' . $userNamePublisher . '</a></h3>
+           <div class="row">
+
+               <div class="col-auto">
+                   <p>        
+                      <img src="' . $userImgPublisher . '" alt="profile" class="PostPublisher">    
+                   </p>
+               </div>
+               
+               <div class="col post-details">
+                    <h4><small>updated on: <strong>' . $postDate . '</strong></small></h4>
+                    <p>name:' . $content . '</p>
+                    <p>post date:'.$postCourse.'</p>
+               </div>
+
+           </div>
+           <div class="col">
+               <a name="download" id="download" class="btn " href="' . $PDF . '" role="button"><i class="fa fa-download" aria-hidden="true"></i> download</a>
+           </div>
+       </div>    
+      
+       ';
+   }else {
+       echo '
+       <div id="posts" class="col-md-5 col-sm-12 post">
+              <h3 class="doctor-name"><a href="doctorProfile.php?u_id='.$Publisher.'">'.$userNamePublisher.'</a></h3>
+               <div class="row">
+
+                   <div class="col-auto">
+                       <p>        
+                          <img src="' . $userImgPublisher .'" alt="profile" class="PostPublisher">    
+                       </p>
+                   </div>
+
+                   <div class="col">
+                        <h4><small>updated on: <strong>'.$postDate.'</strong></small></h4>
+                        <p>'.$content.'</p>
+                        <p>'.$postCourse.'</p>
+                   </div>
+               </div>
+               
+               <!-- 
+               <div class="col">
+                   <a name="download" id="download" class="btn " href="'.$PDF.'" role="button"><i class="fa fa-download" aria-hidden="true"></i> download</a>
+               </div> 
+               -->
+
+           </div>    
+       
+       </div>
+       ';
+    }
     }
 }
 ?>

@@ -1,6 +1,8 @@
 <?php
     include 'connection.php';
-
+    ?>
+    <div class="row">
+<?php
     function  SearchUsers(){
         global $con;
 
@@ -23,31 +25,29 @@
             $userImage = $row['Image'];
 
             echo'  
-                    <div class="row">
-                    <div class="col-sm-4"></div>
-                    <div class="col-cm-6 d-flex justify-content-center">
-                    <div class="row" id="findPeople">
-                        <div class="col-sm-auto  d-flex justify-content-center">
+                <div class=" d-flex justify-content-center align-items-center doctor-card" id="findPeople">
+                        
+                    <div class="col-auto">
                         <a href="userProfile.php?u_id='.$userID.'">
                             <img src="'.$userImage.'" alt="user" width="100px" height="100px"  title="'.$username.'"
-                        /></a>
-                        </div>
-                        <div class="col-sm-auto  d-flex justify-content-center">
+                        </a>
+                    </div>
+            
+                    <div class="col-auto">
                         <a href="userProfile.php?u_id='.$userID.'" class="username">
                             <strong><h2>'.$firstName .'<br>'. $lastName.'</h2></strong>
                         </a>
-                        </div>
-                        <div class="col-sm-4"></div>
                     </div>
-                    </div>
-                    <div class="col-sm-4"></div>
-                </div>
-                <br />
-            ';
+                
+                 </div>';
         }
 
-    }
+    }?>
+    </div>
 
+
+    <div class="row">
+<?php
     function  SearchDoctors(){
         global $con;
 
@@ -70,29 +70,21 @@
             $userImage = $row['Image'];
 
             echo'  
-                    <div class="row">
-                    <div class="col-sm-3"></div>
-                    <div class="col-cm-6  d-flex justify-content-center">
-                    <div class="row" id="findPeople">
-                        <div class="col-sm-auto d-flex justify-content-center">
-                        <a href="doctorProfile.php?u_id='.$userID.'">
-                            <img src="'.$userImage.'" alt="user" width="100px" height="100px"  title="'.$username.'"
-                        /></a>
-                        </div>
-                        <div class="col-sm-auto  d-flex justify-content-center">
-                        <a href="doctorProfile.php?u_id='.$userID.'" class="username">
-                            <strong><h2>'.$firstName .'<br>'. $lastName.'</h2></strong>
-                        </a>
-                        </div>
-                        <div class="col-sm-4"></div>
-                    </div>
-                    </div>
-                    <div class="col-sm-4"></div>
-                </div>
-                <br />
-            ';
-        }
-
-    }
-
-?>
+                         <div class=" d-flex justify-content-center align-items-center doctor-card" id="findPeople">
+                        
+                             <div class="col-auto">
+                                 <a href="doctorProfile.php?u_id='.$userID.'">
+                                     <img src="'.$userImage.'" alt="user" width="100px" height="100px"  title="'.$username.'"/>
+                                 </a>
+                             </div>
+                        
+                             <div class="col-auto">
+                                 <a href="doctorProfile.php?u_id='.$userID.'" class="username">
+                                     <strong><h2>Dr. '.$firstName .'<br>'. $lastName.'</h2></strong>
+                                 </a>
+                             </div>
+                         </div>';
+                        }
+                    }
+                    ?>
+    </div>

@@ -10,24 +10,125 @@
  */
 
 html body {
-    font-family: fantasy !important;
-    background-color: #F2F2F2;
+    font-family: lato !important;
+    background-color: #F0F5F9;
     color: #1a1a1a;
     overflow-x: hidden;
 }
 
-.container {
-    background-color: #DFDCF2;
-    position: relative;
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #fff !important;
+}
+
+.img-login{
+    position: absolute;
+    top: -50%;
+    left: 8%;
+    width: 110px;
+}
+
+.dropdown-menu{
+    min-width: 120px;
+    border: 1px solid #eee;
+    background-color: #2c3e50;
+}
+
+.dropdown-menu a{
+    color: #eee !important;
+}
+
+.dropdown-menu a:hover{
+    color: #2c3e50 !important;
 }
 
 .jumbotron {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     padding-top: 25px;
-    background-color: #0D0259;
-    color: #F2F2F2;
+    background-color: #2C3E50;
+    color: #eee;
+    border-radius: 0px;
 }
 
+.text-login{
+    margin-top: 120px;
+}
+
+
+.text-login p {
+    font-size: 22px;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    font-size: 15px;
+    border: 2px solid #2C3E50;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 4px 4px 4px #0000003f;
+    padding: 30px;
+}
+  
+  .heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: #2c3e50;
+    letter-spacing: 1px;
+  }
+  
+  .form {
+    margin-top: 20px;
+  }
+  
+  .form .input {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: 4px 4px 5px  #0000001f;
+    border-inline: 2px solid transparent;
+  }
+  
+  .form .input::-moz-placeholder {
+    color: rgb(170, 170, 170);
+  }
+  
+  .form .input::placeholder {
+    color: rgb(150, 150, 150);
+  }
+  
+  .form .input:focus {
+    outline: none;
+    border-inline: 2px solid #2c3e50;
+  }
+  
+  .form .login-button {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background: #2c3e50;
+    color: white;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form .login-button:hover {
+    transform: scale(1.03);
+  }
+  
+  .form .login-button:active {
+    transform: scale(0.95);
+  }
+  
+
+/* 
 .mainphoto {
     left: 15%;
     margin: 20px;
@@ -60,53 +161,43 @@ html body {
 .btn {
     border-radius: 3px;
 }
+*/
+.jumbotron-signup{
+    background-color: #2C3E50;
+    color: #eee;
+    border-radius: 0px;
+}
+
+.signup-form .form-control:focus{
+    border: 1px solid #2c3e50;
+    color: #2C3E50;
+}
 
 .signup-form {
-    width: 450px;
+    max-width: 450px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 30px;
     font-size: 15px;
+    border: 2px solid #2C3E50;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 4px 4px 4px #0000003f;
+    padding: 30px;
 }
 
 .signup-form h2 {
-    color: #636363;
-    margin: 0 0 15px;
-    position: relative;
+    color: #2C3E50;
+    margin-top: 5px;
+    margin-bottom: 30px;
     text-align: center;
+    font-weight: 550;
 }
 
-.signup-form h2:before,
-.signup-form h2:after {
-    content: "";
-    height: 2px;
-    width: 25%;
-    background: #d4d4d4;
-    position: absolute;
-    top: 50%;
-    z-index: 2;
-}
-
-.signup-form h2:before {
-    left: 0;
-}
-
-.signup-form h2:after {
-    right: 0;
-}
 
 .signup-form .hint-text {
     color: #999;
     margin-bottom: 30px;
     text-align: center;
-}
-
-.signup-form form {
-    color: #999;
-    border-radius: 3px;
-    margin-bottom: 15px;
-    background: #F2F2F2;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    padding: 30px;
 }
 
 .signup-form .form-group {
@@ -120,8 +211,15 @@ html body {
 .signup-form .btn {
     font-size: 16px;
     font-weight: bold;
-    min-width: 140px;
-    outline: none !important;
+    margin: 0 auto;
+    max-width: 80%;
+    background-color: #2c3e50;
+    color: #eee;
+    transition: 0.2s;
+}
+
+.signup-form .btn:hover{
+   transform: scale(1.03);
 }
 
 .signup-form .row div:first-child {
@@ -148,51 +246,95 @@ html body {
 
 .signup-form form a:hover {
     text-decoration: underline;
-}
+} 
 
 .navbar {
-    background-color: #0D0259 !important;
+    background-color: #2C3E50 !important;
+    min-height: 80px;
 }
 
-.navbar-light .navbar-brand {
+.navbar-brand {
+    color: #F2F2F2;
+    font-size: 23px;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
     color: #F2F2F2;
 }
-
+/* 
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
     color: #F27405;
+} */
+
+.nav-link {
+    color: #eee;
+    transition: 0.2s;
+    margin: 0 10px;
+    font-size: 19px;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color: #AAA3D9;
+.nav-link:hover{
+    color: #eee;
+    transform: scale(1.03);
 }
 
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover {
-    color: #F27405;
+.username-nav{
+    background: #eee ;
+    color: #2C3E50;
+    border-radius: 12px;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 550;
+    margin: 0 40px 0 10px;
 }
 
-.dropdown-item.active,
-.dropdown-item:active {
-    background: #8278BF;
+.username-nav:hover{
+    color: #2C3E50;
 }
 
-.navbar-expand-sm .navbar-nav .dropdown-menu {
-    background: #8278BF;
-    margin-top: 18%;
+.search-btn{
+    color: #eee;
+    transition: 0.2s;
+}
+
+.search-btn:hover{
+    color: #eee;
+}
+
+li.nav-item.dropdown::marker {
+    display: none !important;
+    font-size: 0;
+}
+
+.search-bar{
+    background-color: #eeeeee3f;
+}
+
+.form-control:focus{
+    color: #eee;
+    border: none;
+    box-shadow: none;
+    background-color: #eeeeee3f;
+}
+
+.search-bar::placeholder{
+    color: #eee !important;
 }
 
 .cover {
-    height: 50vh;
+    height: 60vh;
     width: 100vw;
-    border-radius: 0px 0px 7px 7px;
+    border-radius: 0px 0px 11px 11px;
+    filter: brightness(0.7);
 }
 
 .profilePic img {
-    -webkit-clip-path: circle(100px at 100% 100%);
-    clip-path: circle(100px at 50% 50%);
+ 
     width: 200px;
     height: 200px;
     position: relative;
@@ -202,6 +344,9 @@ html body {
     margin-left: auto;
     margin-right: auto;
     margin-top: -20vh;
+    background-color: #eee;
+    border: 1px solid #2C3E50;
+    padding: 10px;
 }
 
 .profileHeader .profilePic .changeimg {
@@ -225,35 +370,20 @@ html body {
 }
 
 .chatBtn {
-    width: 100%;
-    border-width: 1px;
-    border-color: #8278BF;
-    border-style: solid;
+    width: 60%;
+    margin: 40px auto;
     border-radius: 5px;
-    background-color: #15038C;
-    color: #F2F2F2;
+    background-color: #eee;
+    color: #2C3E50;
+    transition: 0.2s;
+    padding: 3px;
+    border: none;
 }
 
 .chatBtn:hover {
-    background-color: #0D0259;
-}
-
-.chatBtn:focus {
-    outline: 0px;
-    background-color: #8278BF;
-}
-
-.confirmUpload {
-    width: fit-content;
-    height: fit-content;
-    background-color: rgba(153, 153, 153, 0.3);
-    border: none;
-    border-radius: 50%;
-}
-
-.confirmUpload i {
-    height: 20px;
-    width: 20px;
+    background-color: #2C3E50;
+    border: 1px solid #eee;
+    color: #eee;
 }
 
 .btn input {
@@ -268,35 +398,300 @@ textarea {
     margin-top: 2px;
 }
 
-.postsArea {
-    margin-top: 20px;
-    border-top: #15038C solid;
-}
-
 .PostPublisher {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    margin: 20px;
     display: block;
-    position: static;
+    position: relative;
+    left: 25px;
 }
 
 #download {
-    width: 100%;
-    margin: 5px;
+    width: 60%;
+    margin: 12px;
+    border: 1px solid #2C3E50;
+    background-color: #2C3E50;
+    color: #eee;
+    transition: 0.3s;
+}
+
+#download:hover{
+    transform: scale(1.03);
 }
 
 .post {
-    border-bottom: #0D0259 solid;
     padding: 5px;
-    margin-bottom: 10px;
+    margin: 40px;
+    border: 2px solid #2C3E50; 
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px #0000003f;
+    transition: 0.2s;
 }
 
-a.username {
+.post:hover{
+    box-shadow: none;
+    transform: scale(1.01);
+}
+
+.post img{
+    border: 1px solid #2C3E50;
+}
+
+.doctor-name{
+    margin: 15px 0;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.doctor-name a{
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 550;
+    transition: 0.1s;
+}
+
+.doctor-name a:hover{
+    color: #000;
+}
+
+/* profile page */
+.notification {
+    display: flex;
+    height:250px;
+    padding:15px;
+    flex-direction: column;
+    isolation: isolate;
+    position: relative;
+    background: #2C3E50df;
+    border-radius: 1rem;
+    overflow: hidden;
+    font-size: 16px;
+    margin: 20px 0;
+    box-shadow: 5px 5px 4px #0000005f;
+    transition: 0.2s;
+  }
+
+  .notification:hover{
+    box-shadow: none;
+  }
+
+  .notification:after {
+    position: absolute;
+    content: "";
+    width: 0.25rem;
+    inset: 0.65rem auto 0.65rem 0.5rem;
+    border-radius: 0.125rem;
+    background: #eee;
+    transition: transform 300ms ease;
+    z-index: 4;
+  }
+  
+  .notification:hover:after {
+    transform: translateX(0.15rem)
+  }
+  
+  .notititle {
+    color: #eee;
+    padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+  }
+  
+  .notification:hover .notititle {
+    transform: translateX(0.15rem)
+  }
+  
+  .notibody {
+    color: #eee;
+    padding: 0 1.25rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+  }
+  
+  .notibody div{
+      margin: 8px;
+  }
+  
+  .notification:hover .notibody {
+    transform: translateX(0.25rem)
+  }
+  
+  
+  .note {
+    color: #000;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.9rem;
+    width: 75%;
+  }
+  
+
+  a.username {
     text-decoration: none;
     cursor: pointer;
     color: #363540;
     padding-left: 10px;
     margin-left: 10px;
+}
+
+.username{
+    font-weight: 550;
+    color: #2C3E50;
+    text-transform:capitalize;
+    margin-bottom: 60px;
+}
+
+.btn-updateprof{
+    background:  #2C3E50; 
+    color: #eee;
+    transition: 0.2s;
+}
+
+
+.btn-updateprof:hover{
+    background:#eee; 
+    color: #2C3E50;
+    border: 1px solid #2c3e50;
+    transform: scale(1.02);
+}
+
+
+.doctors-cards{
+    display: flex !important;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    flex-direction: row;    
+    justify-content:flex-start;
+}
+
+
+.doctor-card{
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 3px solid #2C3E507f; 
+    width: 350px;
+    margin: 10px;
+    transition: 0.2s;
+    box-shadow: 3px 3px 4px #0000003f;
+} 
+
+.doctor-card:hover{
+    border: 3px solid #2C3E50; 
+    transform: scale(1.01);
+    box-shadow: none;
+}
+
+.doctor-card h2{
+    color: #2C3E50 !important;
+}
+
+.doctor-card img{
+    border-radius: 50%;
+    border: 2px solid #2C3E50; 
+}
+
+.searchdoctor-form h1{
+    margin: 25px 0;
+    letter-spacing: 2px;
+}
+
+.searchdoctor-form button{
+    border: 1px solid #2C3E50;
+    background-color: #2C3E50;
+    color: #eee;
+    transition: 0.3s;
+}
+
+.searchdoctor-form button:hover{
+    color: #eee;
+    transform: scale(1.02);
+}
+
+.searchdoctor-form input{
+    height: 38px;
+    padding: 0 10px;
+}
+
+.post-aria{
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #2C3E50; 
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px #0000003f;
+    max-width: 62%;
+}
+
+.hr-post{
+    background-color: #2c3e50;
+}
+
+.courses-title{
+    font-weight: 550;
+    color: #2c3e50;
+    letter-spacing: 2px;
+}
+
+.selectpdf label{
+    border: 1px solid #2C3E50; 
+    background-color: #eee;
+    color: #2C3E50;
+    height: 35px;
+    margin:  0 10px;
+}
+
+.post-aria .form-control{
+    max-width: 120px;
+    height: 35px;
+    border: 1px solid #2C3E50;
+}
+
+.post-aria .form-control:focus{
+    border: 1px solid #2C3E50;
+    background-color: #eee;
+}
+
+.post-aria textarea{
+    max-width: 300px;
+    height: 80px;
+    border: 1px solid #000;
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.post-aria button{
+    background-color: #2C3E50;
+    color: #eee;
+    width: 45%;
+    margin: 20px 0;
+    transition: 0.3s;
+}
+
+.post-aria button:hover{
+    color: #eee;
+    transform: scale(1.04);
+}
+
+@media screen and (max-width:720px) {
+    .navbar navbar-expand-sm{
+        background-color: #2c3e50;
+    }
+    .search-bar{
+        width: 200px;
+    }
+    .navbar-toggler-icon{
+        color: #eee;
+        font-size: 30px;
+    }
 }

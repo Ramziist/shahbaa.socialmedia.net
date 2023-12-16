@@ -36,7 +36,6 @@ if($u_id == "" || $u_id < 0 || !$rowProfile){
     <div class="profileHeader">
         <div class="profilePic">
             <img src="<?php echo " $Image "; ?>" alt="avatar">
-
         </div>
 
         <div class="infoNav">
@@ -50,13 +49,19 @@ if($u_id == "" || $u_id < 0 || !$rowProfile){
             </h3>
         </div>
     </div>
-    <div class="mainBody">
+    
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <ul class="list-group list-group-flush">
-                        <?php if (!$heIsDoctor){ echo'
+
+
+<div class="mainBody">
+
+<div class="row">
+    <div class="col-md-6">
+
+        <div class="notification">
+            <div class="notititle">Doctor information</div>
+            <div class="notibody">
+            <?php if (!$heIsDoctor){ echo'
                         <li class="list-group-item">
                             <p class="email">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -64,68 +69,65 @@ if($u_id == "" || $u_id < 0 || !$rowProfile){
                             </p>
                         </li>';}
                         ?>
+                        
+                <?php 
 
-                        <li class="list-group-item">
-                            <p class="Specialization">
-                                <i class="fa fa-university" aria-hidden="true"></i>
-                                <?php echo " $Specialization"; ?>
-                            </p>
-                        </li>
-                        <?php if (!$heIsDoctor){ echo'
-                        <li class="list-group-item">
-                            <p class="StudyYear">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                '.$StudyYear.' Year
-                            </p>
-                        </li>';}
-                        ?>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <ul class="list-group list-group-flush">
-                    <?php if (!$heIsDoctor){ echo'
-                        <li class="list-group-item">
-                            <p class="DateOfBirth">
-                                <i class="fa fa-birthday-cake" aria-hidden="true"></i>
-                                '.$DateOfBirth.'
-                            </p>
-                        </li>';}
-                        ?>
-                        <li class="list-group-item">
-                            <p class="Gender">
-                                <i class="fa fa-<?php echo "$Gender "; ?>" aria-hidden="true"></i>
-                                <?php echo " $Gender"; ?>
-                            </p>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="profileBtn">
-                                <button class="chatBtn">
-                                    <i class="fa fa-comment" aria-hidden="true"></i> Chat
-                                </button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
+                    echo'
+                      <div>
+                        <i class="fa fa-university" aria-hidden="true"></i> Specialization :'.$Specialization.'
+                      </div>
+                    
+                    <div>';
+                        if(!$heIsDoctor){ 
+                           echo' <li class="list-group-item">
+                                <p class="StudyYear">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    '.$StudyYear.' Year
+                                </p>
+                            </li>';}
+                            echo'
+                    </div>
 
-            </div>
-            <div class="col-md-8">
-            <div class="bio">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laboriosam nesciunt sint repudiandae obcaecati magni, porro maxime molestias soluta dolore corrupti facilis voluptates rem asperiores architecto ipsa quibusdam quo distinctio.
-            </div>
-            </div>
-            <div class="col-md-2">
+                    <div>
+                        ';if (!$heIsDoctor){ 
+                            echo'<li class="list-group-item">
+                                <p class="DateOfBirth">
+                                    <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                    '.$DateOfBirth.'
+                                </p>
+                            </li>';}
+                    echo'</div>
 
+                    <div>
+                        <i class="fa fa-<?php echo $Gender; ?>" aria-hidden="true"></i> Gender :'.$Gender.'
+                    </div>'
+                ?>
             </div>
         </div>
 
     </div>
+
+    <div class="col-md-6">
+        <div class="notification">
+            <div class="notititle">Brief about me:</div>
+                <div class="notibody">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laboriosam nesciunt sint repudiandae obcaecati magni, porro maxime molestias soluta dolore corrupti facilis voluptates rem asperiores architecto ipsa quibusdam quo distinctio.
+                </div> 
+                <button class="chatBtn">
+                        <i class="fa fa-comment" aria-hidden="true"></i> Chat
+                </button>   
+            </div>    
+        </div>
+    </div>
+
 </div>
+</div>
+
 <?php
 include $foot;
 ?>
+
+
+
+
+

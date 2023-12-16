@@ -9,33 +9,23 @@ if (!isset($_SESSION['username'])) {
 }
 
 ?>
+       <div class="text-center searchdoctor-form">
+         <h1>Find Professor</h1><br>
+        
+               <form action="">
+                 <input type="text" placeholder="Search your Professor" name="searchDoctor"/>
+                   <button type="submit" class="btn" name="SearchDoctorBtn">
+                   <i class="fa fa-search" aria-hidden="true"></i>
+                   search
+                   </button>
+               </form>
+       </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <br/>
-        <center><h4>Find Professor</h4></center>
-        <br />
-        <div class="row">
-          <div class="col-sm-4"></div>
-          <div class="col-sm-4 d-flex justify-content-center">
-            <form action="">
-              <input
-                type="text"
-                placeholder="Search your Professor"
-                name="searchDoctor"
-              />
-              <button type="submit" class="btn btn-info" name="SearchDoctorBtn">
-                <i class="fa fa-search" aria-hidden="true"></i>
-                search
-              </button>
-            </form>
-          </div>
-          <div class="col-sm-4"></div>
-        </div>
-        <br /><br />
-        <?php SearchDoctors(); ?>
+    <div class="container doctors-cards">
+        <?php
+            SearchDoctors();
+            ;?>
       </div>
-    </div>
 
 <?php
 include $foot;
