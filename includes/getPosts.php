@@ -54,7 +54,7 @@ function getPost(){
                     </div>
 
                     <div class="col">
-                        <a name="download" id="download" class="btn" href="' . $PDF . '" role="button"><i class="fa fa-download" aria-hidden="true"></i> download</a>
+                        <a name="download" id="download" class="btn" href="' . $PDF . '.pdf" role="button"><i class="fa fa-download" aria-hidden="true"></i> download</a>
                     </div>
             </div>
        ';

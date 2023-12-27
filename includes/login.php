@@ -20,11 +20,11 @@ if (isset($_POST['login'])) {
     if($checkUser == 1){
         $_SESSION['username'] = $username;
 
-        echo "<script>window.open('home.php?u_id=" . $userId . "', '_self')</script>";
+        echo "<script>window.open('../home.php?u_id=" . $userId . "', '_self')</script>";
 
     }else{
         echo "<script>alert('Username or password is incorrect')</script>";
-        echo "<script>window.open('index.php', '_self')</script>";
+        echo "<script>window.open('../index.php', '_self')</script>";
     }
 
 }

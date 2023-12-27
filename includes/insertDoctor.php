@@ -47,7 +47,7 @@ if (isset($_POST['signup'])) {
       
     if ($query) {
         echo "<script>alert('Welcome Doctor!!');</script>";
-        echo "<script>window.open('../signupDoctor.php','_self');</script>";
+        echo "<script>window.open('../adminPanel.php','_self');</script>";
     } else {
         echo "<script>alert('something get wrong');</script>";
         die('Invalid query: ' . mysqli_error($con));
