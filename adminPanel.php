@@ -2,7 +2,7 @@
 
 include 'init.php';
 include $head;
-include 'includes/adminnavbar.php';
+include $navbar;
 
 
     if (!isset($_POST['login'])) {
@@ -23,9 +23,9 @@ include 'includes/adminnavbar.php';
 
 <div class="container ">
 
-            <h1 class='courses-title mt-5 text-center'>Courses</h1>
-     <div class="postsArea row d-flex align-items-center justify-content-center">
-     </div>
+        <h1 class='courses-title mt-5 text-center'>Courses</h1>
+        <div class="postsArea row d-flex align-items-center justify-content-center">
+        </div>
 </div>
 
 <?php

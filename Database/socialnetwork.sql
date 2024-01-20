@@ -37,7 +37,7 @@ CREATE TABLE `doctor` (
   `gender` int(11) NOT NULL,
   `Image` varchar(255) NOT NULL,
   `cover` varchar(255) NOT NULL,
-  `isDoctor` int(11) NOT NULL
+  `isDoctor` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

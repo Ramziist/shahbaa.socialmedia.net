@@ -2,7 +2,7 @@
 include ("connection.php");
 
 if (isset($_POST['signup'])) {
-     $fName = $_POST['firstName'];
+    $fName = $_POST['firstName'];
     $lName = $_POST['lastName'];
     $mName = $_POST['middleName'];
     $moName = $_POST['motherName'];

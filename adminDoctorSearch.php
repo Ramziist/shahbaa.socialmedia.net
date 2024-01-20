@@ -2,10 +2,10 @@
 
 include 'init.php';
 include $head;
-include 'includes/adminnavbar.php';
+include $navbar;
 
 if (!isset($_SESSION['username'])) {
-  header("location: index.php");
+    header("location: index.php");
 }
 
 ?>
@@ -23,7 +23,7 @@ if (!isset($_SESSION['username'])) {
 
 <div class="container doctors-cards">
     <?php
-            SearchDoctors();
+            adminSearchDoctors();
             ;?>
 </div>
 

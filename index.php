@@ -14,16 +14,12 @@ include $head;
 <div class='container'>
   <div class="row">
 
-    <div class="col-md-6 col-sm-12 text-login">
+    <div class="col-md-6 col-sm-12 text-login" align='center'>
+      <img src="img/headerlogo.png" alt="Al-Shahbaa Logo" style="padding-bottom: 25px;">
+      <br>
       <span>
         A website for managing student and doctoral data
       </span>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat,
-        nemo aperiam veritatis distinctio assumenda dolor cum aspernatur perspiciatis? Enim,
-        eaque. Veritatis unde a nulla velit deserunt nostrum quae architecto ab!
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat.
-      </p>
     </div>
 
 

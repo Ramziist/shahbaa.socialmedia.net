@@ -11,7 +11,7 @@ include $getPosts;
 
 <div class="container ">
 <?php
-    if ($isDoctor) {
+    if (isset($isDoctor) && $isDoctor) {
 
         echo '
         <div class="col-md-6 post-aria">

@@ -8,6 +8,7 @@
     include 'connection.php';
 
     $user = $_SESSION['username'];
+if ($user == 'admin' ){}else{
     $getUser = "select * from user where username='$user'";
     $runUser = mysqli_query($con,$getUser);
     $row = mysqli_fetch_array($runUser);
@@ -51,7 +52,7 @@
         $second = $row['course2'];
         $third = $row['course3'];
 
-    }
+    }}
     
     
     ?>
